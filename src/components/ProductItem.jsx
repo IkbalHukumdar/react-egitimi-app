@@ -1,9 +1,8 @@
 import "./ProductItem.css";
-function ProductItem(props) {
-  console.log("Ad:"+props.fullName )
-  console.log("Yas:"+props.age)
-  console.log(props)
-  const {imageUrl,productName,productPrice}=props
+
+function ProductItem({ product }) {
+  const { imageUrl, productName, productPrice } = product;
+
   return (
     <div className="product-item">
       <div className="product-image">
@@ -11,10 +10,10 @@ function ProductItem(props) {
       </div>
       <div className="product-info">
         <h2>{productName}</h2>
-        <span>{productPrice}$</span>
-
+        <span>{productPrice}₺</span>
       </div>
     </div>
   );
 }
+
 export default ProductItem;

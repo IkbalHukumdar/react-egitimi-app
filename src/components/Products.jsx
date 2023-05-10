@@ -1,21 +1,43 @@
 import ProductItem from "./ProductItem";
-import "./Products.css"
+import "./Products.css";
+
+const productData = [
+  {
+    productName: "Soda",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaXGeoatJyRmP9Aa-q4zaqgcUQim3bQHvjg&usqp=CAU",
+    productPrice: 4,
+  },
+  {
+    productName: "Bilgisayar",
+    imageUrl:
+      "https://images.unsplash.com/photo-1640955014216-75201056c829?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    productPrice: 5000,
+  },
+  {
+    productName: "Kebap",
+    imageUrl:
+      "https://images.unsplash.com/photo-1644364935906-792b2245a2c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8a2ViYXB8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    productPrice: 100,
+  },
+];
+
 function Products() {
-  const fullName="Ikbal Hukumdar"
-  const imageUrl =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaXGeoatJyRmP9Aa-q4zaqgcUQim3bQHvjg&usqp=CAU";
-  const productName= "Soda";
-  const productPrice=2
   return (
-    <div className="products-wrapper">
+    <div className="product-wrapper">
       <h1>Products</h1>
       <div className="products">
-        <ProductItem  imageUrl={imageUrl}
-        productName={productName} productPrice={productPrice}/>
-      <ProductItem imageUrl ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2S-B7dop2YUM_TT1LR__Ejo7boiNp7y2oQ&usqp=CAU"
-      productName="Çilek" productPrice="3"/>      
+        {productData.map((product) => {
+          return (
+            <ProductItem
+              key={product.productName}
+              product={product}
+            />
+          );
+        })}
       </div>
     </div>
   );
 }
+
 export default Products;
