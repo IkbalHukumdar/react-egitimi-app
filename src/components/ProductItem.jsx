@@ -1,19 +1,17 @@
 import "./ProductItem.css";
-function ProductItem() {
-  const imageUrl =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaXGeoatJyRmP9Aa-q4zaqgcUQim3bQHvjg&usqp=CAU";
-  const productTitle = "Soda";
-  const productPrice=2
-  const date=new Date()
+function ProductItem(props) {
+  console.log("Ad:"+props.fullName )
+  console.log("Yas:"+props.age)
+  console.log(props)
+  const {imageUrl,productName,productPrice}=props
   return (
     <div className="product-item">
       <div className="product-image">
         <img src={imageUrl} alt="" />
       </div>
       <div className="product-info">
-        <h2>{productTitle}</h2>
+        <h2>{productName}</h2>
         <span>{productPrice}$</span>
-        <span>{date.toISOString()}</span>
 
       </div>
     </div>
