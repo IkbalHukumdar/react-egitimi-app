@@ -1,13 +1,12 @@
 import "./App.css";
-import Products from "./Products/Products.jsx";
+import Products from "./components/Products/Products.jsx";
 
-const App=()=> {
+const App = () => {
   return (
     <div className="App">
-      <Products/>
-      
+      <Products />
     </div>
   );
-}
+};
 
 export default App;

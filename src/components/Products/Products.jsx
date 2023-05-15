@@ -1,8 +1,8 @@
 import ProductItem from "./ProductItem";
+import { productData } from "../../productData";
 import "./Products.css";
-import { productData } from "../productData";
 
-const Products=()=> {
+const Products = () => {
   return (
     <div className="product-wrapper">
       <h1>Products</h1>
@@ -13,6 +13,6 @@ const Products=()=> {
       </div>
     </div>
   );
-}
+};
 
 export default Products;

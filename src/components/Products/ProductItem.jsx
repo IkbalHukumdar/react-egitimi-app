@@ -1,7 +1,7 @@
 import ProductInfo from "./ProductInfo";
 import "./ProductItem.css";
 
-const  ProductItem=({ product })=> {
+const ProductItem = ({ product }) => {
   const { imageUrl, productName, productPrice } = product;
 
   return (
@@ -15,6 +15,6 @@ const  ProductItem=({ product })=> {
       </ProductInfo>
     </div>
   );
-}
+};
 
 export default ProductItem;
