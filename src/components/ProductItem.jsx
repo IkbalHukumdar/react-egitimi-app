@@ -1,3 +1,4 @@
+import ProductInfo from "./ProductInfo";
 import "./ProductItem.css";
 
 function ProductItem({ product }) {
@@ -8,10 +9,10 @@ function ProductItem({ product }) {
       <div className="product-image">
         <img src={imageUrl} alt="" />
       </div>
-      <div className="product-info">
+      <ProductInfo>
         <h2>{productName}</h2>
         <span>{productPrice}₺</span>
-      </div>
+      </ProductInfo>
     </div>
   );
 }
