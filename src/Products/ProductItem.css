@@ -4,6 +4,7 @@
   
   .product-item img {
     width: 100%;
+    height: 80px;
   }
   
   .product-info {
