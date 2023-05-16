@@ -3,14 +3,20 @@ import Counter from "../Counter";
 import ProductInfo from "./ProductInfo";
 import "./ProductItem.css";
 
-const ProductItem = ({ product }) => {
-  const { imageUrl, productName, productPrice } = product;
-  // let title = productName;
+const ProductItem = ({ product: { imageUrl, productName, productPrice } }) => {
+  //const{product}=props;
+  //const { imageUrl, productName, productPrice } = product;
+
+   
+
   const [title, setTitle] = useState(productName);
   const [counter, setCounter] = useState(productPrice);
+  const [deneme, setDeneme] = useState("deneme");
 
   const clickHandler = () => {
+    setDeneme("erkan");
     setTitle("Güncellendi!");
+
     console.log(productName, "Güncellendi!");
   };
 
@@ -21,7 +27,7 @@ const ProductItem = ({ product }) => {
       </div>
       <ProductInfo>
         <h2>{title}</h2>
-
+        <p>{deneme}</p>
         <Counter
           productPrice={productPrice}
           counter={counter}
