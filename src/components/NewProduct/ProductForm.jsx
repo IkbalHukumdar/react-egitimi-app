@@ -5,32 +5,27 @@ const ProductForm = () => {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [imageUrl, setImageUrl] = useState("");
- 
 
   //fiyat tutacak
   const titleChangeHandler = (event) => {
     setProductName(event.target.value);
-    
   };
   const priceChangeHandler = (event) => {
     setProductPrice(event.target.value);
-   
   };
   const imageChangeHandler = (event) => {
     setImageUrl(event.target.value);
-    
   };
   //ürün eklendiğinde sayfa yenilemnmesini engelliyor
-  const submitHandler=(event)=>{
-    event.preventDefault()
-    const newProductData={
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const newProductData = {
       productName,
       productPrice,
       imageUrl,
-    }
+    };
     console.log(newProductData);
-  }
- 
+  };
 
   return (
     <form className="product-form" onSubmit={submitHandler}>
