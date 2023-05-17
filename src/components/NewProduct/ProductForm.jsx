@@ -25,6 +25,9 @@ const ProductForm = () => {
       imageUrl,
     };
     console.log(newProductData);
+    setProductName("");
+    setProductPrice("");
+    setImageUrl("");
   };
 
   return (
@@ -35,18 +38,26 @@ const ProductForm = () => {
           type="text"
           placeholder="Ürün Adı Giriniz..."
           onChange={titleChangeHandler}
+          value={productName}
         />
       </div>
       <div className="product-form-input">
         <label>Ürün Fiyatı</label>
-        <input type="number" placeholder="Ürün Fiyatı Giriniz..." />
+        <input
+          type="number"
+          placeholder="Ürün Fiyatı Giriniz..."
+          onChange={priceChangeHandler}
+          value={productPrice}
+        />
       </div>
+
       <div className="product-form-input">
         <label>Ürün Görseli</label>
         <input
           type="text"
           placeholder="Ürün Görseli Giriniz..."
           onChange={imageChangeHandler}
+          value={imageUrl}
         />
       </div>
       <button className="product-form-button">Ürün Ekle</button>
