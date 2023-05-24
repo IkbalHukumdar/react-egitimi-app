@@ -22,6 +22,7 @@ const ProductForm = (props) => {
     event.preventDefault();
 
     const newProductData = {
+      id: props.products.length + 1,
       productName,
       productPrice,
       imageUrl,
@@ -63,7 +64,16 @@ const ProductForm = (props) => {
           value={imageUrl}
         />
       </div>
-      <button className="product-form-button">Ürün Ekle</button>
+      <div className="form-buttons">
+        <button className="product-form-button">Ürün Ekle</button>
+        <button
+          onClick={() => props.setIsOpen(false)}
+          className="product-form-button cancel"
+          type="button"
+        >
+          Vazgeç
+        </button>
+      </div>
     </form>
   );
 };
